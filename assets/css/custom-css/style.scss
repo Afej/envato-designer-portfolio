@@ -1,0 +1,611 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// colors
+$red: #af112e;
+$blue-black: #041119;
+$light-blue-black: #0b1820;
+$grey: #36393e;
+$white: #ffffff;
+
+body {
+  background: $blue-black;
+  font-family: 'Univers LT Std' !important;
+  overflow-x: hidden;
+}
+
+// typography
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+//buttons
+.btn {
+  color: $white;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  border-radius: 44px !important;
+  background: #af112e !important;
+  border: none;
+  box-shadow: none !important;
+  padding: 22px 44px 16px 46px;
+
+  &:active {
+    border: none;
+    outline: none !important;
+  }
+
+  &:focus {
+    border: none;
+    box-shadow: none !important;
+  }
+
+  &:hover {
+    border: 1px solid #ffffff;
+    outline: none !important;
+  }
+}
+
+.btn-alternative {
+  border-radius: 44px !important;
+  border: 1px solid #af112e;
+  outline: none !important;
+  padding: 22px 44px 16px 46px;
+
+  &:active {
+    border: 1px solid #ffffff;
+    outline: none !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:hover {
+    color: $red;
+    outline: none !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+// utility classes
+.text-red {
+  color: $red;
+}
+
+.bottom-line {
+  width: 700px;
+  margin: 10px auto;
+  height: 1px;
+  margin-top: 69px;
+  background-color: $grey;
+}
+
+.line {
+  width: 70px;
+  margin: 10px auto;
+  height: 1px;
+  background-color: $white;
+}
+
+// HEADER SECTION
+.header {
+  position: relative;
+  margin-bottom: 50px;
+
+  .header-img {
+    position: absolute;
+    left: 50px;
+    top: -54px;
+    width: 750px;
+    height: 1108px;
+  }
+
+  .header-content {
+    position: absolute;
+    top: 300px;
+    left: 695px;
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 54px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 50px;
+      padding-right: 100px;
+    }
+  }
+
+  .custom-nav {
+    position: absolute;
+    top: 610px;
+    right: 50px;
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+
+      .icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: $grey;
+
+        img {
+          margin: 13px;
+        }
+
+        &.current {
+          background: $red;
+        }
+      }
+    }
+  }
+}
+
+// ABOUT ME SECTION
+.about-me {
+  margin: 50px 0;
+
+  .resume {
+    position: relative;
+    margin-bottom: 89px;
+
+    &::before {
+      content: 'resume';
+      position: absolute;
+      width: 647px;
+      height: 152px;
+      top: -40px;
+      left: 220px;
+      font-weight: 900;
+      font-size: 140px;
+      line-height: 152px;
+      z-index: -1;
+      text-transform: uppercase;
+      color: $light-blue-black;
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: 70px;
+      line-height: 76px;
+    }
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 52px;
+  }
+
+  li {
+    text-transform: capitalize;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+
+  .about-img {
+    position: relative;
+    height: 620px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../../images/Rectangle\ 9.png');
+      width: 432.12px;
+      height: 620px;
+      z-index: -1;
+      top: 40px;
+      left: 40px;
+    }
+  }
+}
+
+// STATS SECTION
+.stats {
+  margin: 70px 0;
+
+  .card {
+    background: $blue-black !important;
+    border: 1px solid $grey;
+    border-radius: 20px;
+
+    .card-title {
+      font-weight: 900;
+      font-size: 70px;
+      line-height: 76px;
+      margin-bottom: 16px;
+    }
+
+    .card-text {
+      font-size: 25px;
+      line-height: 30px;
+      color: $white;
+    }
+  }
+}
+
+// EDUCATION AND EXPERIENCE
+.experience {
+  margin: 70px 0;
+
+  .icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: $red;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 80px;
+      left: 40px;
+      height: 110px;
+      width: 1px;
+      background: $grey;
+    }
+
+    img {
+      margin: 24px;
+    }
+  }
+
+  .btn-grey {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.08em;
+    border-radius: 40px !important;
+    padding: 10px 25px !important;
+    height: 50px;
+    background: #36393e;
+  }
+
+  .details {
+    margin-left: 100px;
+    margin-bottom: 35px;
+    margin-top: 20px;
+
+    h4 {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.08em;
+    }
+  }
+}
+
+// portfolio section
+.portfolio {
+  margin: 50px 0;
+
+  .projects {
+    position: relative;
+    margin-bottom: 89px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &::before {
+      content: 'projects';
+      position: absolute;
+      width: 647px;
+      height: 152px;
+      top: -40px;
+      left: 0px;
+      margin-left: 317px;
+      margin-right: 319px;
+      font-weight: 900;
+      font-size: 140px;
+      line-height: 152px;
+      z-index: -1;
+      text-transform: uppercase;
+      color: $light-blue-black;
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: 70px;
+      line-height: 76px;
+    }
+  }
+
+  .rectangle-1 {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../../images/Rectangle\ 19.png');
+      background-repeat: no-repeat;
+      z-index: -1;
+      width: 1408px;
+      height: 590px;
+      left: 0;
+      top: -70px;
+    }
+
+    .portfolio-wrapper {
+      margin-left: 139px;
+      margin-right: 139px;
+
+      .rectangle-2 {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url('../../images/Rectangle\ 21.png');
+          background-repeat: no-repeat;
+          z-index: -1;
+          width: 560px;
+          height: 590px;
+          left: 85px;
+          top: 42px;
+        }
+      }
+
+      .rectangle-3 {
+        position: relative;
+        height: 636px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-image: url('../../images/Rectangle\ 20.png');
+          background-repeat: no-repeat;
+          width: 560px;
+          height: 590px;
+          z-index: -1;
+          top: 92px;
+          left: 100px;
+        }
+      }
+    }
+  }
+
+  .bottom-line {
+    margin-top: 120px;
+  }
+}
+
+//contacts section
+.contacts {
+  margin: 50px 0;
+
+  .contact {
+    position: relative;
+    margin-bottom: 89px;
+
+    &::before {
+      content: 'contacts';
+      position: absolute;
+      width: 647px;
+      height: 152px;
+      top: -40px;
+      left: 150px;
+      font-weight: 900;
+      font-size: 140px;
+      line-height: 152px;
+      z-index: -1;
+      text-transform: uppercase;
+      color: $light-blue-black;
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: 70px;
+      line-height: 76px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .contact-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-icons {
+    margin-top: 30px;
+
+    .social-icon {
+      width: 56px;
+      height: 56px;
+      background: $grey;
+      margin-right: 30px;
+      border-radius: 50%;
+
+      img {
+        margin: 12px 14px 19px 12px;
+      }
+    }
+  }
+
+  form {
+    .form-group {
+      ::placeholder {
+        color: $white;
+      }
+
+      input {
+        background: $grey;
+        border-radius: 108px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 25px;
+        padding-left: 24px;
+        padding-top: 18px;
+        padding-bottom: 15px;
+      }
+
+      textarea {
+        background: $grey;
+        border-radius: 38px;
+        height: 284px;
+        font-size: 21px;
+        line-height: 25px;
+        padding-left: 24px;
+        padding-top: 40px;
+      }
+    }
+  }
+}
+
+//footer
+.footer {
+  position: relative;
+
+  &::before {
+    content: 'I’m available, let’s talk!';
+    position: absolute;
+    left: 97px;
+    top: 0px;
+    z-index: -1;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 76px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $light-blue-black;
+  }
+}
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////MEDIA QUERIES///////////////////////
+
+@media (min-width: '1200px') {
+  // portfolio section
+  .portfolio {
+    .projects {
+      &::before {
+        top: -40px;
+        left: 0px;
+        margin-left: 317px;
+        margin-right: 319px;
+      }
+    }
+
+    .rectangle-1 {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/Rectangle\ 19.png');
+        background-repeat: no-repeat;
+        z-index: -1;
+        width: 1408px;
+        height: 590px;
+        left: 0px;
+        top: -70px;
+      }
+
+      .portfolio-wrapper {
+        margin-left: 139px;
+        margin-right: 139px;
+
+        .rectangle-2 {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../../images/Rectangle\ 21.png');
+            background-repeat: no-repeat;
+            z-index: -1;
+            width: 560px;
+            height: 590px;
+            left: 85px;
+            top: 42px;
+          }
+        }
+
+        .rectangle-3 {
+          position: relative;
+          height: 636px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../../images/Rectangle\ 20.png');
+            background-repeat: no-repeat;
+            width: 560px;
+            height: 590px;
+            z-index: -1;
+            top: 92px;
+            left: 240px;
+          }
+        }
+      }
+    }
+
+    .bottom-line {
+      margin-top: 120px;
+    }
+  }
+}
+
+@media (min-width: '1024px') {
+  // portfolio section
+}
